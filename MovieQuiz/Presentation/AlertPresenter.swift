@@ -15,12 +15,12 @@ class AlertPresenter: AlertProtocol {
         self.viewController = viewController
     }
     
-    func showAlert(quiz aler: AlertModel) {
-        let alert = UIAlertController(title: aler.title,
-                                      message: aler.message,
+    func showAlert(quiz alertModel: AlertModel) {
+        let alert = UIAlertController(title: alertModel.title,
+                                      message: alertModel.message,
                                       preferredStyle: .alert)
         
-        let action = UIAlertAction(title: aler.buttonText, style: .default, handler: aler.completion)
+        let action = UIAlertAction(title: alertModel.buttonText, style: .default, handler: alertModel.completion)
         
         alert.addAction(action)
         

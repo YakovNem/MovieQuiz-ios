@@ -21,7 +21,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         alertPresenter = AlertPresenter(viewController: self)
         questionFactory = QuestionFactory(delegate: self)
         questionFactory?.requestNextQuestion()
-        statisticService = StatisticServiceImplementation()
     }
     // MARK: - QuestionFactoryDelegate
     
@@ -86,8 +85,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         } else {
             imageView.layer.borderColor = UIColor.ypRed.cgColor
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            guard let self = self else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
             self.showNextQuestionOrResults()
             self.noButton.isEnabled = true
             self.yesButton.isEnabled = true
