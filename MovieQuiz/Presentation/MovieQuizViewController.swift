@@ -89,6 +89,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             self.showNextQuestionOrResults()
             self.noButton.isEnabled = true
             self.yesButton.isEnabled = true
+            imageView.layer.borderColor = UIColor.clear.cgColor
         }
     }
     
