@@ -124,16 +124,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-Qj-Bdy">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Do8-vB-y6y"/>
                         <color key="backgroundColor" name="black"/>
                         <constraints>
                             <constraint firstItem="Do8-vB-y6y" firstAttribute="trailing" secondItem="g0U-bH-7Fs" secondAttribute="trailing" constant="20" id="5Rg-M4-wiJ"/>
+                            <constraint firstItem="PM8-Qj-Bdy" firstAttribute="centerX" secondItem="3ct-CI-dSC" secondAttribute="centerX" id="6cu-f9-B7e"/>
+                            <constraint firstItem="PM8-Qj-Bdy" firstAttribute="centerY" secondItem="3ct-CI-dSC" secondAttribute="centerY" id="91S-pr-acm"/>
                             <constraint firstItem="g0U-bH-7Fs" firstAttribute="leading" secondItem="Do8-vB-y6y" secondAttribute="leading" constant="20" id="E6u-T0-usm"/>
                             <constraint firstItem="g0U-bH-7Fs" firstAttribute="top" secondItem="Do8-vB-y6y" secondAttribute="top" constant="10" id="VIf-Ne-xTs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="PM8-Qj-Bdy" id="oSh-Cz-5qQ"/>
                         <outlet property="counterLabel" destination="vRJ-8W-MH1" id="O9K-uh-r4Z"/>
                         <outlet property="imageView" destination="8DE-Gm-Gqk" id="VQd-GW-Wie"/>
                         <outlet property="noButton" destination="1Mv-Qm-cnC" id="87n-8C-uFz"/>

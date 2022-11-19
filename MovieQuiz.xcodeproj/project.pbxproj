@@ -16,6 +16,9 @@
 		AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */; };
 		AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77F5732857F8810062FB14 /* Date+Extensions.swift */; };
 		AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AFA542836189F00399704 /* Array+Extensions.swift */; };
+		B422F1E729256DBA00C20713 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422F1E629256DBA00C20713 /* NetworkClient.swift */; };
+		B422F1E929256FD000C20713 /* MostPopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422F1E829256FD000C20713 /* MostPopularMovies.swift */; };
+		B422F1EB292570A400C20713 /* MoviesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422F1EA292570A400C20713 /* MoviesLoader.swift */; };
 		B43DCAD9290F040800A81857 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43DCAD7290F040800A81857 /* YS Display-Bold.ttf */; };
 		B43DCADA290F040800A81857 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43DCAD8290F040800A81857 /* YS Display-Medium.ttf */; };
 		B47FCABD29114193002E0DC1 /* QuestionFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47FCABC29114193002E0DC1 /* QuestionFactoryDelegate.swift */; };
@@ -44,6 +47,9 @@
 		AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AD77F5732857F8810062FB14 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AD7AFA542836189F00399704 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		B422F1E629256DBA00C20713 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B422F1E829256FD000C20713 /* MostPopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularMovies.swift; sourceTree = "<group>"; };
+		B422F1EA292570A400C20713 /* MoviesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesLoader.swift; sourceTree = "<group>"; };
 		B43DCAD7290F040800A81857 /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
 		B43DCAD8290F040800A81857 /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
 		B47FCABC29114193002E0DC1 /* QuestionFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactoryDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 				B47FCAC42913F441002E0DC1 /* AlertProtocol.swift */,
 				B4DA0AD9291D48140087B7AE /* StatisticServiceProtocol.swift */,
 				B4DA0AD32919425D0087B7AE /* StatisticService.swift */,
+				B422F1E629256DBA00C20713 /* NetworkClient.swift */,
+				B422F1EA292570A400C20713 /* MoviesLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 				B4CBDB6A29100F7F00AB0949 /* QuizQuestion.swift */,
 				B47FCAC02911754C002E0DC1 /* AlertModel.swift */,
 				B4DA0AD5291947000087B7AE /* GameRecord.swift */,
+				B422F1E829256FD000C20713 /* MostPopularMovies.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,8 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B422F1E729256DBA00C20713 /* NetworkClient.swift in Sources */,
 				B4DA0ADA291D48140087B7AE /* StatisticServiceProtocol.swift in Sources */,
 				AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */,
+				B422F1E929256FD000C20713 /* MostPopularMovies.swift in Sources */,
 				B47FCAC3291175A3002E0DC1 /* AlertPresenter.swift in Sources */,
 				B47FCAC12911754C002E0DC1 /* AlertModel.swift in Sources */,
 				AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */,
@@ -296,6 +307,7 @@
 				AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */,
 				B4CBDB6929100F6B00AB0949 /* QuizResultsViewModel.swift in Sources */,
 				AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */,
+				B422F1EB292570A400C20713 /* MoviesLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,17 +456,18 @@
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N29P9VDV4Y;
+				DEVELOPMENT_TEAM = 8NG4R6TNYK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieQuiz/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,10 +497,11 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
